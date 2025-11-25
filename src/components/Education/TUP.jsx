@@ -18,17 +18,19 @@ const TUP = () => {
                         <ul className="list-disc ml-5">
                             <h4>BACKEND:</h4>
                             <li>.NET con C#</li>
-                            <li>API</li>
                             <li>Entity Framework</li>
                             <li>LINQ</li>
+                            <li>Java + SpringBoot</li>
+                            <li>Hibernate</li>
+                            <li>Swagger</li>
+                            <li>Algoritmos y estructuras de datos</li>
                         </ul>
                         <br />
                         <ul className="list-disc ml-5">
                             <h4>FRONTEND:</h4>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>Javascript</li>
+                            <li>TypeScript</li>
                             <li>Bootstrap</li>
+                            <li>Angular</li>
                         </ul>
                         <br />
                         <ul className="list-disc ml-5">

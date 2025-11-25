@@ -13,6 +13,8 @@ import tailwindLogo from '../assets/tailwind.png'
 import sassLogo from '../assets/sass.png'
 import typescriptLogo from '../assets/typescript.png';
 import dotNetLogo from '../assets/dotnet.png.png'
+import javaLogo from '../assets/java.png'
+import springBoot from '../assets/springboot.png'
 
 export default function Tecnologies(){
     const logos = [
@@ -30,7 +32,9 @@ export default function Tecnologies(){
         { src: mongoLogo, alt: 'MongoDB' },
         { src: sqlLogo, alt: 'SQL' },
         { src: gitLogo, alt: 'GIT'},
-        { src: gitHubLogo, alt: 'GitHub'}
+        { src: gitHubLogo, alt: 'GitHub'},
+        { src: javaLogo, alt: 'Java'},
+        { src: springBoot, alt: 'SpringBoot'}
     ];
 
     return (
