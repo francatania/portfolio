@@ -82,7 +82,7 @@ const ProjectCard = ({ title, arrayImgs, tech, description, website, videoUrl, r
     }
 
     return (
-        <article className="w-[90%] sm:w-[45%] h-[40rem] border-2 rounded-[2rem] border-oceanBlue text-oceanBlue flex flex-col">
+        <article className="w-full h-[40rem] border-2 rounded-[2rem] border-oceanBlue text-oceanBlue flex flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_8px_32px_rgba(39,70,144,0.22)]">
             <div className="h-[10%] flex justify-center items-center">
                 <h3 className="text-xl font-bold sm:text-2xl">{title}</h3>
             </div>
