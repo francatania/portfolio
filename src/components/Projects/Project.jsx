@@ -22,6 +22,7 @@ const Project = () => {
     const card2Ref = useScrollReveal({ threshold: 0.08, delay: 100 });
     const card3Ref = useScrollReveal({ threshold: 0.08, delay: 0 });
     const card4Ref = useScrollReveal({ threshold: 0.08, delay: 100 });
+    const card5Ref = useScrollReveal({ threshold: 0.08, delay: 0 });
 
     const imgsBaboon = [baboonMobile, baboonMobile5, baboonMobile6, baboonMobile2, baboonWeb];
     const titleBaboon = "Baboon Clothes - Ecommerce";
@@ -50,12 +51,22 @@ const Project = () => {
     const videoABMC = "https://www.youtube.com/embed/U34WirYqPeQ";
     const repoABMC = [{ repository: 'https://github.com/francatania/MedicamentosABMC', description: 'Repositorio Frontend' }, { repository: 'https://github.com/francatania/FarmaCordoba_API', description: 'Repositorio Backend' }];
 
+    const titleBookly = "BooklyNow";
+    const techBookly = "SpringBoot, FastAPI, Node.js, Angular, Docker Compose, RabbitMQ, PostgreSQL, Nginx.";
+    const descriptionBookly = "Plataforma de reservas full-stack construida con arquitectura de microservicios. Incluye Spring Boot (autenticación y empresas), FastAPI (reservas), Node.js (notificaciones), frontend en Angular, RabbitMQ para notificaciones asíncronas orientadas a eventos, PostgreSQL por servicio, Docker Compose y Nginx como API gateway.";
+    const videoBookly = "https://www.youtube.com/embed/0U_TKVok0OM";
+    const repoBookly = [{ repository: 'https://github.com/francatania/booking-platform', description: 'Repositorio' }];
+
     return (
-        <section id="proyectos-web" className="bg-whiteMag w-full text-oceanBlue flex flex-col items-center mt-[-1px] mb-[-1px] pb-[1px]">
+        <section id="proyectos-web" className="bg-whiteMag w-full text-oceanBlue flex flex-col items-center mt-[-1px] mb-[-1px] pb-2">
             <div className="w-[70%] flex justify-center items-center h-[10%]">
                 <h2 ref={titleRef} className="reveal text-center text-3xl font-bold mb-8">Proyectos</h2>
             </div>
             <div className="flex flex-wrap w-full sm:w-[70%] h-[90%] justify-around gap-4">
+                <div ref={card5Ref} className="reveal w-[90%] sm:w-[45%]">
+                    <ProjectCard title={titleBookly} tech={techBookly} description={descriptionBookly} videoUrl={videoBookly} repository={repoBookly} />
+                </div>
+
                 <div ref={card1Ref} className="reveal w-[90%] sm:w-[45%]">
                     <ProjectCard arrayImgs={imgsBaboon} title={titleBaboon} tech={techBaboon} description={descriptionBaboon} website={websiteBaboon} repository={repoBaboon} />
                 </div>
@@ -68,6 +79,7 @@ const Project = () => {
                 <div ref={card4Ref} className="reveal w-[90%] sm:w-[45%]">
                     <ProjectCard title={titleABMC} tech={techABMC} description={descriptionABMC} videoUrl={videoABMC} repository={repoABMC} />
                 </div>
+
             </div>
         </section>
     );

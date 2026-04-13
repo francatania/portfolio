@@ -1,12 +1,23 @@
 import image from '../assets/imagen_cv.jpg'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 
-const ROLES = ['Desarrollador Full Stack', 'Desarrollador Frontend', 'Desarrollador Backend'];
+const ROLES = ['Full Stack', 'Frontend', 'Backend'];
+
+const heroTextStyle = (active) => ({
+    opacity: active ? 1 : 0,
+    transform: active ? 'translateX(0)' : 'translateX(-40px)',
+    transition: 'opacity 0.9s ease, transform 0.9s ease',
+});
+
+const heroImageStyle = (active) => ({
+    opacity: active ? 1 : 0,
+    transform: active ? 'translateX(0)' : 'translateX(60px)',
+    transition: 'opacity 0.9s ease, transform 0.9s ease',
+});
 
 export default function Description() {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-    const imageContainerRef = useRef(null);
-    const heroTextRef = useRef(null);
+    const [heroActive, setHeroActive] = useState(false);
 
     const [typedText, setTypedText] = useState('');
     const [roleIdx, setRoleIdx] = useState(0);
@@ -14,18 +25,13 @@ export default function Description() {
     const [phase, setPhase] = useState('typing'); // 'typing' | 'deleting'
 
     useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768);
-        };
+        const handleResize = () => setIsMobile(window.innerWidth <= 768);
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     useEffect(() => {
-        const frame = requestAnimationFrame(() => {
-            imageContainerRef.current?.classList.add('active');
-            heroTextRef.current?.classList.add('active');
-        });
+        const frame = requestAnimationFrame(() => setHeroActive(true));
         return () => cancelAnimationFrame(frame);
     }, []);
 
@@ -64,13 +70,14 @@ export default function Description() {
             <div className='w-[90%] sm:w-[70%] flex flex-col sm:flex-row'>
 
                 <div
-                    ref={heroTextRef}
-                    className={`hero-text w-full sm:w-[70%] flex flex-col justify-center ${isMobile ? 'order-2' : 'order-1'}`}
+                    style={heroTextStyle(heroActive)}
+                    className={`w-full sm:w-[70%] flex flex-col justify-center ${isMobile ? 'order-2' : 'order-1'}`}
                 >
                     <h2 className={`text-whiteMag text-center ${isMobile ? 'text-[2rem]' : 'text-[3rem]'}`}>
                         Franco Catania
                     </h2>
                     <h3 className={`text-whiteMag text-center ${isMobile ? 'text-[1.5rem]' : 'text-[2rem]'} min-h-[2.5rem]`}>
+                        Desarrollador{' '}
                         {typedText}
                         <span className='typing-cursor' style={{ height: isMobile ? '1.4rem' : '1.8rem' }}>&nbsp;</span>
                     </h3>
@@ -83,10 +90,10 @@ export default function Description() {
                 </div>
 
                 <div
-                    ref={imageContainerRef}
-                    className={`right-container h-[25rem] p-6 sm:p-0 sm:h-[20rem] ${isMobile ? 'order-1' : 'order-2'} flex flex-col justify-center`}
+                    style={heroImageStyle(heroActive)}
+                    className={`h-[25rem] p-6 sm:p-0 sm:h-[20rem] ${isMobile ? 'order-1' : 'order-2'} flex flex-col justify-center`}
                 >
-                    <img src={image} alt="CV" className="animate-right rounded-full w-full h-full object-cover" />
+                    <img src={image} alt="CV" className="rounded-full w-full h-full object-cover" />
                 </div>
             </div>
         </section>

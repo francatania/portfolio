@@ -1,6 +1,6 @@
 const TUP = () => {
     return (
-        <article className="w-[90%] sm:w-[70%] h-[40rem] sm:h-[35rem] m-auto flex flex-row"> 
+        <article className="w-[90%] sm:w-[70%] h-[50rem] sm:h-[40rem] m-auto flex flex-row"> 
             <div className="flex flex-col items-center h-full w-1/2">
                 <div className="border-2 border-whiteMag rounded-full h-[4rem] w-40 flex items-center justify-center"> 
                     <h4>2024 - Actualidad</h4>
@@ -24,6 +24,9 @@ const TUP = () => {
                             <li>Hibernate</li>
                             <li>Swagger</li>
                             <li>Algoritmos y estructuras de datos</li>
+                            <li>Docker Compose</li>
+                            <li>Nginx</li>
+                            <li>Mockito y JUNIT</li>
                         </ul>
                         <br />
                         <ul className="list-disc ml-5">
