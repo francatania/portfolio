@@ -52,8 +52,8 @@ const Project = () => {
     const repoABMC = [{ repository: 'https://github.com/francatania/MedicamentosABMC', description: 'Repositorio Frontend' }, { repository: 'https://github.com/francatania/FarmaCordoba_API', description: 'Repositorio Backend' }];
 
     const titleBookly = "BooklyNow";
-    const techBookly = "SpringBoot, FastAPI, Node.js, Angular, Docker Compose, RabbitMQ, PostgreSQL, Nginx.";
-    const descriptionBookly = "Plataforma de reservas full-stack construida con arquitectura de microservicios. Incluye Spring Boot (autenticación y empresas), FastAPI (reservas), Node.js (notificaciones), frontend en Angular, RabbitMQ para notificaciones asíncronas orientadas a eventos, PostgreSQL por servicio, Docker Compose y Nginx como API gateway. Cuenta con traducciones en inglés y español, incluyendo las notificaciones.";
+    const techBookly = "SpringBoot, FastAPI, Node.js, Angular, Docker Compose, RabbitMQ, PostgreSQL, Nginx, Playwright";
+    const descriptionBookly = "Plataforma de reservas full-stack construida con arquitectura de microservicios. Incluye Spring Boot (autenticación y empresas), FastAPI (reservas), Node.js (notificaciones), frontend en Angular, RabbitMQ para notificaciones asíncronas orientadas a eventos, PostgreSQL por servicio, Docker Compose y Nginx como API gateway. Cuenta con traducciones en inglés y español, incluyendo las notificaciones, y una suite automatizada E2E con Playwright.";
     const videoBookly = "https://www.youtube.com/embed/0U_TKVok0OM";
     const repoBookly = [{ repository: 'https://github.com/francatania/booking-platform', description: 'Repositorio' }];
 

@@ -1,7 +1,7 @@
 import image from '../assets/imagen_cv.jpg'
 import { useState, useEffect } from 'react'
 
-const ROLES = ['Full Stack', 'Frontend', 'Backend'];
+const ROLES = ['Desarrollador Full Stack', 'QA Automation'];
 
 const heroTextStyle = (active) => ({
     opacity: active ? 1 : 0,
@@ -77,7 +77,7 @@ export default function Description() {
                         Franco Catania
                     </h2>
                     <h3 className={`text-whiteMag text-center ${isMobile ? 'text-[1.5rem]' : 'text-[2rem]'} min-h-[2.5rem]`}>
-                        Desarrollador{' '}
+                    
                         {typedText}
                         <span className='typing-cursor' style={{ height: isMobile ? '1.4rem' : '1.8rem' }}>&nbsp;</span>
                     </h3>
@@ -85,6 +85,7 @@ export default function Description() {
                         <p>
                             Soy un joven profesional y estudiante apasionado de la tecnología con muchas ganas de aprender y aportar mis conocimientos.
                             Tengo experiencia con diversos lenguajes de programación, bases de datos SQL y no SQL y metodologías ágiles.
+                            También cuento con experiencia en QA y automatización de pruebas.
                         </p>
                     </div>
                 </div>

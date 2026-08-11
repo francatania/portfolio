@@ -22,6 +22,10 @@ import pythonLogo from '../assets/python.svg';
 import angularLogo from '../assets/angular.svg';
 import rabbitmqLogo from '../assets/rabbitmq.svg';
 import postgresqlLogo from '../assets/postgresql.svg';
+import playwrightLogo from '../assets/playwright.svg';
+import webdriverioLogo from '../assets/webdriverio.svg';
+import karateLogo from '../assets/karate.svg';
+import xrayLogo from '../assets/xray.svg';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const GROUPS = [
@@ -67,6 +71,15 @@ const GROUPS = [
             { src: rabbitmqLogo, alt: 'RabbitMQ' },
             { src: gitLogo, alt: 'Git' },
             { src: gitHubLogo, alt: 'GitHub' },
+        ],
+    },
+    {
+        label: 'QA Automation',
+        logos: [
+            { src: playwrightLogo, alt: 'Playwright' },
+            { src: webdriverioLogo, alt: 'WebDriverIO' },
+            { src: karateLogo, alt: 'Karate Labs' },
+            { src: xrayLogo, alt: 'Xray de Jira' },
         ],
     },
 ];
@@ -115,7 +128,7 @@ function LogoItem({ logo, delay }) {
             <img
                 src={logo.src}
                 alt={logo.alt}
-                className='w-22 h-20 object-cover transition-transform duration-200 hover:scale-110 hover:drop-shadow-lg cursor-default'
+                className='w-22 h-20 object-contain transition-transform duration-200 hover:scale-110 hover:drop-shadow-lg cursor-default'
             />
             <span className='
                 absolute -top-8 left-1/2 -translate-x-1/2
